@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PG Cópias | PG Tel - Estoque + Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="pglogo.png" alt="Logo PG" class="logo" />
+      <img src="pgtel.png" alt="Logo PG Tel" class="logo" />
+    </div>
+    <h1>📦 Sistema de Estoque - PG Cópias | PG Tel</h1>
+  </header>
+
+  <main>
+    <section id="form-add">
+      <h2>➕ Adicionar Item ao Estoque</h2>
+      <input type="text" id="itemNome" placeholder="Nome do item" />
+      <input type="text" id="itemCategoria" placeholder="Categoria (ex: Capinhas)" />
+      <input type="number" id="itemQuantidade" placeholder="Quantidade" min="1" />
+      <input type="text" id="itemCor" placeholder="Cor (se for capinha)" />
+      <textarea id="itemBio" placeholder="Descrição do item" rows="3"></textarea>
+      <button onclick="adicionarItem()">Adicionar</button>
+    </section>
+
+    <section id="estoque">
+      <h2>📋 Estoque Atual</h2>
+      <div id="listaEstoque"></div>
+    </section>
+
+    <hr />
+
+    <section id="chat">
+      <h2>💬 Chat em Tempo Real</h2>
+      <div id="messages"></div>
+      <input type="text" id="username" placeholder="Seu nome" />
+      <input type="text" id="messageInput" placeholder="Digite sua mensagem..." />
+      <button onclick="sendMessage()">Enviar</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>SISTEMA DA PG COPIAS E DA PG TEL 📱</p>
+  </footer>
+
+  <audio id="notifSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
